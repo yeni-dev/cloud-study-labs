@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+#storage
+output_dir="/tmp/s3-bash-scripts"
+
+
+#folder creation
+mkdir -p $output_dir
+
+
+#random gen number
+num_files=$((RANDOM % 6 + 5))
+
+for((i=1; i<=$num_files; i++));do
+    #gen random file name
+    random_filename="$output_dir/file_$i.txt"
+
+
+    #gen random data 
+    def if=/dev/urandom of="$random_filename" bs=1024 count=$((RANDOM % 1024 + 1)) 2>/dev/null
+done
+
+tree $output_dir
