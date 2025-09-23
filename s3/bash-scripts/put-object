@@ -4,8 +4,14 @@
 output_dir="/tmp/s3-bash-scripts"
 
 
+#remove folder 
+
+rm -r $output_dir
+
+
 #folder creation
 mkdir -p $output_dir
+
 
 
 #random gen number
@@ -21,3 +27,4 @@ for((i=1; i<=$num_files; i++));do
 done
 
 tree $output_dir
+
