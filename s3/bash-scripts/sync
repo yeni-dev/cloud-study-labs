@@ -45,7 +45,7 @@ num_files=$((RANDOM % 6 + 5))
 
 for((i=1; i<=$num_files; i++));do
     #gen random file name
-    random_filename="$output_dir/fileprefix_$i.txt"
+    random_filename="$output_dir/${fileprefix}_$i.txt"
 
 
     #gen random data 
